@@ -1,5 +1,7 @@
 /**
 Askisi 1.7
+
+How to use structs
 */
 #include <stdio.h>
 

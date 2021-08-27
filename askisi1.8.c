@@ -12,6 +12,7 @@ Also, in the end, the user will be given the choice to save the students data in
 
 
 #define N 8
+#define DEFAULTSIZE 256
 
 typedef struct  {
     char onoma[50];
@@ -23,6 +24,7 @@ typedef struct  {
 void gemismaPinaka(foititis *foitites);
 void ektyposiPinaka(foititis *foitites);
 void fortosiPinakaApoArxeio(foititis *foitites, char *fileName);
+void apothikefsiPinakaSeArxeio(foititis *foitites, char *fileName);
 
 int main()
 {
@@ -50,7 +52,9 @@ int main()
     } while ((strcmp(choice2,"Yes")!=0) && (strcmp(choice2,"No")!=0));
     if (strcmp(choice2,"Yes")==0)  // the answer is yes
     {
-        printf("\nPlease, give the name of the file where the data will be saved");
+        printf("\nPlease, give the name of the file where the data will be saved: ");
+        scanf("%s", fileName);
+        apothikefsiPinakaSeArxeio(foitites, fileName);
     }
     printf("\n----------------------");
     printf("\n Thank you for everything. Bye Bye :-)");
@@ -105,15 +109,66 @@ void fortosiPinakaApoArxeio(foititis *foitites, char *fileName){
         printf("Error: could not open file %s", fileName);
         exit(0); // exit the process
     }
-    char ch;
-    while ((ch = fgetc(fp)) != EOF)
-    {
-        printf("%c ",ch);
-    }
 
     // read the file contents and load them in the foitites struct
+    char fileLine[DEFAULTSIZE];
+
+    char *token;
+    int i=0;
+    while (fgets(fileLine, DEFAULTSIZE, fp) != NULL) {  // for each line of the file
+        // split line to tokens
+        const char delimiter[2] = " ";
+        token = strtok(fileLine, delimiter);
+        strcpy(foitites[i].onoma, token);
+        token = strtok(NULL, delimiter);
+        strcpy(foitites[i].epitheto, token);
+        token = strtok(NULL, delimiter);
+        strcpy(foitites[i].ar_mitroou, token);
+        token = strtok(NULL, delimiter);
+        foitites[i].mo = atof(token);
+        i++;
+    }
 
     // close the file
     fclose(fp);
 }
 
+/**
+* Synartisi pou apothikevei ta stoixeia foititon se arxeio
+Dexetai os parametro pinaka pou periexei structs me stoixeia
+foititon
+*/
+void apothikefsiPinakaSeArxeio(foititis *foitites, char *fileName) {
+    FILE *fp = fopen(fileName,"w"); // create file for writing
+    if (fp == NULL) {
+        printf("Error: could not open file %s", fileName);
+        exit(0); // exit the process
+    }
+
+    fputs("---NEOS PINAKAS ME FOITITES---\n", fp);
+    // for each student (foititis), write his/her info on the file
+    int i;
+    char stringMo[10];
+    for (i=0;i<8;i++) {
+        // create the string line for the student
+        char stringLine[DEFAULTSIZE];
+        strcpy(stringLine, "");
+        strcat(stringLine,foitites[i].onoma);
+        strcat(stringLine," ");
+        strcat(stringLine,foitites[i].epitheto);
+        strcat(stringLine," ");
+        strcat(stringLine,foitites[i].ar_mitroou);
+        strcat(stringLine," ");
+        gcvt(foitites[i].mo, 5, stringMo);  // convert mo to string
+        strcat(stringLine,stringMo);
+        strcat(stringLine,"\n");
+
+        // write the line to the file
+        fputs(stringLine, fp);
+
+    }
+    printf("\n Students data succesfully saved in file %s",fileName);
+
+    // close the file
+    fclose(fp);
+}

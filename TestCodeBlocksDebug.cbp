@@ -31,9 +31,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="main.c">
+		<Unit filename="ask1.6.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="askisi1.8.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

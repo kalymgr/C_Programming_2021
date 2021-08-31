@@ -31,10 +31,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="askisi1.8.h" />
-		<Unit filename="askisi2.2.c">
+		<Unit filename="arithmitiki_deikton.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="askisi1.8.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

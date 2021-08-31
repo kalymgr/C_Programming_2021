@@ -1,5 +1,5 @@
 /**
-Programma gia arithmitiki deikton
+Programma gia katanoisi arithmitikis deikton
 */
 
 # include <stdio.h>
@@ -11,6 +11,9 @@ int main() {
     printf("\n%c", *onoma);
     printf("\n%c", onoma[0]);
     onoma++;
+    printf("\n%c", *onoma);
+    printf("\n%c", onoma[0]);
+    onoma--;
     printf("\n%c", *onoma);
     printf("\n%c", onoma[0]);
 }

@@ -2,8 +2,9 @@
 1629357753 source:c:\users\mtsougranis\documents\c programming\testcodeblocksdebug\main.c
 	<stdio.h>
 
-1629884436 source:c:\users\mtsougranis\documents\c programming\c_programming_2021\main.c
+1630406049 source:c:\users\mtsougranis\documents\c programming\c_programming_2021\main.c
 	<stdio.h>
+	<string.h>
 
 1630049754 source:c:\users\mtsougranis\documents\c programming\c_programming_2021\askisi1.8.c
 	<stdio.h>
@@ -18,4 +19,8 @@
 
 1630397526 source:c:\users\mtsougranis\documents\c programming\c_programming_2021\askisi2.2.c
 	<stdio.h>
+
+1630406171 source:c:\users\mtsougranis\documents\c programming\c_programming_2021\arithmitiki_deikton.c
+	<stdio.h>
+	<string.h>
 

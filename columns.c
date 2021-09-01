@@ -25,12 +25,9 @@ int main() {
     printf("%-20s", "sofia");
     printf("%-20s", "erga");
 
-
     // Print some elements with center justification
     printf("\n\n ---Print elements with center justification--- \n");
     printf("%*s", 10+strlen("skoulikomirmigkotrypa")/2,"skoulikomirmigkotrypa");
     printf("\n");
     printf("%*s", 10+strlen("sofia")/2, "sofia");
-
-
 }

@@ -2,9 +2,9 @@
 1629357753 source:c:\users\mtsougranis\documents\c programming\testcodeblocksdebug\main.c
 	<stdio.h>
 
-1630481522 source:c:\users\mtsougranis\documents\c programming\c_programming_2021\main.c
+1630913481 source:c:\users\mtsougranis\documents\c programming\c_programming_2021\main.c
 	<stdio.h>
-	<string.h>
+	<stdlib.h>
 
 1630049754 source:c:\users\mtsougranis\documents\c programming\c_programming_2021\askisi1.8.c
 	<stdio.h>
@@ -42,6 +42,14 @@
 	<stdio.h>
 
 1630569051 source:c:\users\mtsougranis\documents\c programming\c_programming_2021\askisi1.8b.c
+	<stdio.h>
+	<stdlib.h>
+
+1630910532 source:c:\users\mtsougranis\documents\c programming\c_programming_2021\sofia_problimatiko_files.c
+	<stdio.h>
+	<stdlib.h>
+
+1630915577 source:c:\users\mtsougranis\documents\c programming\c_programming_2021\malloc_arrays.c
 	<stdio.h>
 	<stdlib.h>
 

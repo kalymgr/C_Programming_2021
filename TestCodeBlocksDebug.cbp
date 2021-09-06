@@ -32,7 +32,7 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="askisi1.8.h" />
-		<Unit filename="askisi1.8b.c">
+		<Unit filename="malloc_arrays.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>

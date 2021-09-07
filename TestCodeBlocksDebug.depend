@@ -49,7 +49,8 @@
 	<stdio.h>
 	<stdlib.h>
 
-1630915577 source:c:\users\mtsougranis\documents\c programming\c_programming_2021\malloc_arrays.c
+1630995493 source:c:\users\mtsougranis\documents\c programming\c_programming_2021\malloc_arrays.c
 	<stdio.h>
 	<stdlib.h>
+	<string.h>
 
